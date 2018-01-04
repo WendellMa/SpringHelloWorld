@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <bean id="role11" class="com.myq.pojo.Role">
+        <property name="id" value="1"/>
+        <property name="roleName" value="CiCi"/>
+        <property name="note" value="一个长寿姑娘"/>
+    </bean>
+    <bean id="role22" class="com.myq.pojo.Role">
+        <property name="id" value="2"/>
+        <property name="roleName" value="王美丽"/>
+        <property name="note" value="来自乐山"/>
+    </bean>
+    <bean id="user1" class="com.myq.pojo.User">
+        <property name="id" value="1"/>
+        <property name="userName" value="user_name_1"/>
+    </bean>
+    <bean id="user2" class="com.myq.pojo.User">
+        <property name="id" value="2"/>
+        <property name="userName" value="user_name_2"/>
+    </bean>
+    <bean id="userRoleAssembly" class="com.myq.pojo.UserRoleAssembly">
+        <property name="id" value="1"/>
+        <property name="list">
+            <list>
+                <ref bean="role11"/>
+                <ref bean="role22"/>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key-ref="role11" value-ref="user1"/>
+                <entry key-ref="role22" value-ref="user2"/>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <ref bean="user1"/>
+                <ref bean="user2"/>
+            </set>
+        </property>
+    </bean>
+</beans>
