@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @author romens
  * @version 1.0
  */
-@Component
+@Component("roleService")
 public class RoleServiceImpl implements RoleService {
     private Logger logger = Logger.getLogger(RoleServiceImpl.class);
 
