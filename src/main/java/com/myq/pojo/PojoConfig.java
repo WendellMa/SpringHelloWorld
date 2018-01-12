@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ImportResource;
  * @version 1.0
  */
 @ComponentScan(basePackageClasses = {com.myq.annotation.pojo.Role.class, RoleServiceImpl.class},
-    basePackages = {"com.myq.pojo", "com.myq.annotation"})
+    basePackages = {"com.myq.pojo"})
 @ImportResource({"classpath:bean/spring-dataSource.xml"})
 public class PojoConfig {
 }
